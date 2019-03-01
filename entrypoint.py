@@ -76,11 +76,11 @@ if config['storage']['type'] == 'filesystem':
         Repo.init(collections_folder)
 
 # ensure ownership of RADICALE_USER
-for path in (COLLECTIONS_DIR, CONFIG_DIR, INTERPOLATED_CONFIG_PATH):
-    if path.is_dir():
-        check_call(['chown', '-R', RADICALE_USER, str(path)])
-    else:
-        check_call(['chown', RADICALE_USER, str(path)])
+# for path in (COLLECTIONS_DIR, CONFIG_DIR, INTERPOLATED_CONFIG_PATH):
+#     if path.is_dir():
+#         check_call(['chown', '-R', RADICALE_USER, str(path)])
+#     else:
+#         check_call(['chown', RADICALE_USER, str(path)])
 
 # fork radicale as RADICALE_USER
 stdout.flush()
